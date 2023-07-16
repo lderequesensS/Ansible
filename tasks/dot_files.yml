@@ -1,4 +1,5 @@
 - name: clone dotfiles
+  become: no
   shell: git clone git@gitlab.com:leonardo.sobarzo/dotfiles.git
   tags:
     - software
