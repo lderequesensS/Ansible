@@ -1,0 +1,5 @@
+- name: clone dotfiles
+  shell: git clone git@gitlab.com:leonardo.sobarzo/dotfiles.git
+  tags:
+    - software
+    - dotfiles

@@ -1,0 +1,9 @@
+- name: Auto Configuration
+  hosts: localhost
+  become: true
+  tasks:
+    - include: tasks/shell.yml
+    - include: tasks/git.yml
+    - include: tasks/ssh.yml
+    - include: tasks/neovim.yml
+    - include: tasks/dot_files.yml

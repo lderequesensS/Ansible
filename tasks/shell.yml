@@ -1,0 +1,19 @@
+- name: Install zsh
+  dnf: name=zsh
+  tags:
+    - development
+- name: Change shell to zsh
+  shell: chsh -s $(which zsh)
+  tags:
+    - development
+- name: Install oh-my-zsh
+  shell: curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+  become_user: leo
+  tags:
+    - development
+- name: Clone highlighting 
+  ansible.builtin.git:
+    repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
+    dest: '/home/leo/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'
+  tags:
+    - development

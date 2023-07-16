@@ -1,0 +1,22 @@
+- name: Change permissions for key
+  copy:
+    src: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa"
+    mode: 0600
+  tags:
+    - ssh
+    - dotfiles
+- name: Change permissions for key pub
+  copy:
+    src: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
+    dest: "{{ lookup('env', 'HOME') }}/.ssh/id_rsa.pub"
+    mode: 0644
+  tags:
+    - ssh
+    - dotfiles
+- name: Add gitlab.com to known hosts
+  shell: ssh-keyscan -t rsa gitlab.com > "{{ lookup('env', 'HOME') }}/.ssh/known_hosts"
+  tags:
+    - ssh
+    - dotfiles
+
