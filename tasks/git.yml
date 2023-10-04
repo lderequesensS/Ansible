@@ -1,4 +1,5 @@
 - name: Git setup email
+  become: no
   git_config:
     name: user.email
     scope: global
