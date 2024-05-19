@@ -3,7 +3,7 @@
   git_config:
     name: user.email
     scope: global
-    value: "leonardo.sobarzo@protonmail.com"
+    value: "lderequesensS@protonmail.com"
   tags:
   - git
 - name: Git setup name
