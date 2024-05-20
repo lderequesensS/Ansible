@@ -19,4 +19,8 @@
   tags:
     - ssh
     - dotfiles
-
+- name: Add github.com to known hosts
+  shell: ssh-keyscan -t rsa github.com > "{{ lookup('env', 'HOME') }}/.ssh/known_hosts"
+  tags:
+    - ssh
+    - dotfiles

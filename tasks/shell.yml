@@ -11,7 +11,7 @@
   become_user: leo
   tags:
     - development
-- name: Clone highlighting 
+- name: Clone highlighting
   ansible.builtin.git:
     repo: 'https://github.com/zsh-users/zsh-syntax-highlighting.git'
     dest: '/home/leo/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'

@@ -1,4 +1,12 @@
-- name: Install Firefox
-  dnf: name=firefox
+# - name: Install Firefox
+#   dnf: name=firefox
+#   tags:
+#     - software
+- name: Install neovim
+  dnf: name=neovim
+  tags:
+    - software
+- name: Install stow
+  dnf: name=stow
   tags:
     - software

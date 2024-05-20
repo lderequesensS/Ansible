@@ -1,0 +1,12 @@
+- name: Install ufw
+  dnf: name=ufw
+  tags:
+    - firewall
+- name: base
+  shell: ufw default deny incoming && ufw default allow outgoing
+  tags:
+    - firewall
+- name: all
+  shell: ufw allow 24642/udp && ufw allow 30000/tcp && ufw allow 22000
+  tags:
+    - firewall

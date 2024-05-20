@@ -2,8 +2,8 @@
   hosts: localhost
   become: true
   tasks:
-    - include: tasks/shell.yml
-    - include: tasks/git.yml
-    - include: tasks/ssh.yml
-    - include: tasks/neovim.yml
-    - include: tasks/dot_files.yml
+    - import_tasks: tasks/shell.yml
+    - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/software.yml
+    - import_tasks: tasks/dot_files.yml
+    - import_tasks: tasks/firewall.yml
