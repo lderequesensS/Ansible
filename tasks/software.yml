@@ -10,3 +10,31 @@
   dnf: name=stow
   tags:
     - software
+- name: Install brightnessctl
+  dnf: name=brightnessctl
+  tags:
+    - software
+- name: Install feh
+  dnf: name=feh
+  tags:
+    - software
+- name: Install maim (screenshot)
+  dnf: name=maim
+  tags:
+    - software
+- name: Install playerctl
+  dnf: name=playerctl
+  tags:
+    - software
+- name: Install pulseaudio-utils
+  dnf: name=pulseaudio-utils
+  tags:
+    - software
+- name: Install xclip
+  dnf: name=xclip
+  tags:
+    - software
+- name: Install blueman
+  dnf: name=blueman
+  tags:
+    - software
