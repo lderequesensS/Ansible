@@ -1,7 +1,3 @@
-# - name: Install Firefox
-#   dnf: name=firefox
-#   tags:
-#     - software
 - name: Install neovim
   dnf: name=neovim
   tags:
@@ -36,5 +32,25 @@
     - software
 - name: Install blueman
   dnf: name=blueman
+  tags:
+    - software
+- name: Install fzf
+  dnf: name=fzf
+  tags:
+    - software
+- name: Install pcmanfm
+  dnf: name=pcmanfm
+  tags:
+    - software
+- name: Install lxappearance
+  dnf: name=lxappearance
+  tags:
+    - software
+- name: Install VLC
+  dnf: name=vlc
+  tags:
+    - software
+- name: Install steam
+  dnf: name=steam
   tags:
     - software

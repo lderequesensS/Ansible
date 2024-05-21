@@ -7,6 +7,10 @@
   tags:
     - firewall
 - name: all
-  shell: ufw allow 24642/udp && ufw allow 30000/tcp && ufw allow 22000
+  shell: ufw allow 24642/udp comment "Stardew Valley" && ufw allow 30000/tcp comment "FoundryVTT" && ufw allow 22000 comment "Syncthing" && ufw allow 21027/udp comment "Syncthing broadcast"
+  tags:
+    - firewall
+- name: start
+  shell: ufw enable
   tags:
     - firewall
